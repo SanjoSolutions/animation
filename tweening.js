@@ -159,10 +159,6 @@ function degrees(value) {
   return (2 * Math.PI) * value / 360
 }
 
-function convertRadiansToDegrees(value) {
-  return value / (2 * Math.PI / 360)
-}
-
 async function wait(duration) {
   return new Promise(resolve => setTimeout(resolve, duration))
 }
