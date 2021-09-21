@@ -2,6 +2,7 @@
 
 This work is devoted to God.
 
-## Demo
+## Demos
 
-[Demo](https://sanjosolutions.github.io/animation/)
+* [Frame by frame rendering](https://sanjosolutions.github.io/animation/)
+* [Tweening](https://sanjosolutions.github.io/animation/tweening.html)
