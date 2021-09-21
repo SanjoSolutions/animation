@@ -3,44 +3,46 @@ import { render } from './unnamed/render.js'
 
 const DURATION_OF_ONE_FRAME = 1000 / 60 // in milliseconds, with 60 frames per second.
 
-const { canvas, context } = createFullDocumentCanvas()
-document.body.appendChild(canvas)
+export function main() {
+  const { canvas, context } = createFullDocumentCanvas()
+  document.body.appendChild(canvas)
 
-const animation = {
-  states: [
-    {
-      name: 'pie',
-      arguments: [
-        25,
-        25,
-        24,
-        degrees(30),
-        degrees(330)
-      ],
-      stroke: true,
-      strokeStyle: 'black',
-      fill: true,
-      fillStyle: 'yellow'
-    },
-    {
-      name: 'pie',
-      arguments: [
-        25,
-        25,
-        24,
-        degrees(0),
-        degrees(360)
-      ],
-      stroke: true,
-      strokeStyle: 'black',
-      fill: true,
-      fillStyle: 'yellow'
-    }
-  ],
-  duration: 1000
+  const animation = {
+    states: [
+      {
+        name: 'pie',
+        arguments: [
+          25,
+          25,
+          24,
+          degrees(30),
+          degrees(330)
+        ],
+        stroke: true,
+        strokeStyle: 'black',
+        fill: true,
+        fillStyle: 'yellow'
+      },
+      {
+        name: 'pie',
+        arguments: [
+          25,
+          25,
+          24,
+          degrees(0),
+          degrees(360)
+        ],
+        stroke: true,
+        strokeStyle: 'black',
+        fill: true,
+        fillStyle: 'yellow'
+      }
+    ],
+    duration: 1000
+  }
+
+  animate(canvas, context, animation)
 }
-
-animate(canvas, context, animation)
 
 async function animate(canvas, context, animation) {
   const { duration, states } = animation
